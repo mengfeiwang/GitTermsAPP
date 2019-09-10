@@ -188,6 +188,11 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
+    Intent intent = new Intent(A.this, B.class);
+    Bundle extras = new Bundle();
+extras.putString("StringVariableName", intValue + "");
+intent.putExtras(extras);
+    startActivity(intent);
 
 }
 
