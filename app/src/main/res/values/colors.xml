@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="buttoncolor">#3049A9</color>
+
+    <color name="background">#ccffff</color>
+    <color name="white">#ccffff</color>
+    <color name="shallowblue">#ccccff</color>
+    <color name="buttoonBackground">#CCC2CBF7</color>
+    <color name="buttoonBackground1">#CC9FAEF8</color>
+    <color name="buttoonBackground2">#CC6E85F7</color>
+    <color name="buttoonBackground3">#CC4F6CF1</color>
+    <drawable name="gray">#ccc</drawable>
+</resources>
