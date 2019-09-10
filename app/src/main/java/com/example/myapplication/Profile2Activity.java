@@ -11,11 +11,15 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Profile2Activity extends AppCompatActivity {
     Button NewGame, Exit;
     TextView score;
+    Intent in = getIntent();
+    Bundle b = in.getExtras();
+    Integer s = b.getInt("Score");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         NewGame = findViewById(R.id.NewGame);
         Exit = findViewById(R.id.Exit);
-        score.setText("Score: " + mScore);
+        score.setText("Score: " + s);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile2);
 
