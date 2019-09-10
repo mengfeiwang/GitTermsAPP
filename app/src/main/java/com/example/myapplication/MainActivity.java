@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private BankWord mBankWord= new BankWord();
     private String mAnswer;
     private int mScore;
-    private int mBankWordLength=mBankWord.mBankWord.length-1;
+    private int mBankWordLength=mBankWord.mBankWord.length-1;//comment
 
     /**
      * The onCreate method is called when Activity class is first created.
