@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button answers1, answers2, answers3, answers4;
     TextView word, score;
+
     private BankWord mBankWord= new BankWord();
     private String mAnswer;
     private int mScore;
@@ -141,26 +142,11 @@ public class MainActivity extends AppCompatActivity {
      * The"yes" goes to the starting UI and the exit goes to finish the APP
      */
     private void gameOver(){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
-        alertDialogBuilder
-                .setMessage("     Game Over! Your Score is "+ mScore + " points" )
-                .setCancelable(false)
-                .setPositiveButton("NEW GAME",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
-                            }
-                        })
-                .setNegativeButton("EXIT                                            ",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                finish();
-                            }
-                        });
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
+        Intent intent = new Intent(this, Profile2Activity.class);
+        Bundle extras = new Bundle();
+        extras.putString("StringVariableName", mScore + "");
+        intent.putExtras(extras);
+        launchActivity();
     }
 
     /**
@@ -188,11 +174,10 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
-    Intent intent = new Intent(A.this, B.class);
-    Bundle extras = new Bundle();
-extras.putString("StringVariableName", intValue + "");
-intent.putExtras(extras);
-    startActivity(intent);
+    private void launchActivity() {
+        Intent intent = new Intent(this, Profile2Activity.class);
+        startActivity(intent);
+    }
 
 }
 
