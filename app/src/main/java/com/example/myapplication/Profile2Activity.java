@@ -17,20 +17,25 @@ public class Profile2Activity extends AppCompatActivity {
      * textView for demonstrating the tips and display your score.
      * The bundle is for the Integer data to be passed.
      */
+
     Button NewGame, Exit;
     TextView Score;
-    Bundle extras = getIntent().getExtras();
-    String stringVariableName = extras.getString("StringVariableName");
-    int intVariableName = Integer.parseInt(stringVariableName);
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Bundle extras = getIntent().getExtras();
+        String stringVariableName = extras.getString("StringVariableName");
+        int intVariableName = Integer.parseInt(stringVariableName);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile2);
 
         //Declare the button and textViews
         NewGame = findViewById(R.id.NewGame);
         Exit = findViewById(R.id.Exit);
+        Score = findViewById(R.id.Score);
         Score.setText("Score: " + intVariableName);
 
         /**

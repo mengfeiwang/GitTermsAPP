@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         Bundle extras = new Bundle();
         extras.putString("StringVariableName", mScore + "");
         intent.putExtras(extras);
-        launchActivity();
+        startActivity(intent);
     }
 
     /**
